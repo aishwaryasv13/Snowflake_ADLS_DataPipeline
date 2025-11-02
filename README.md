@@ -1,6 +1,8 @@
 # Snowflake_ADLS_DataPipeline
 Project demonstrating integration between Azure Data Lake Storage and Snowflake using external stages and structured database layers (bronze, silver, gold).
+
 🌩️ Azure Data Lake to Snowflake Data Pipeline
+
 📘 Project Overview
 This project demonstrates how to integrate Azure Data Lake Storage (ADLS) with Snowflake to build a scalable data pipeline.
 It establishes a secure connection using storage integration and external stages, and organizes data into the Bronze–Silver–Gold data architecture model for efficient data processing and analytics.
