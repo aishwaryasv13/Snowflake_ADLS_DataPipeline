@@ -1,0 +1,13 @@
+CREATE OR REPLACE STORAGE INTEGRATION azure_pacificretail_integration
+  TYPE = EXTERNAL_STAGE
+  STORAGE_PROVIDER = AZURE
+  ENABLED = TRUE
+  AZURE_TENANT_ID = '3652e8e5-dba0-48d7-9ddf-c27d30b90211'
+  STORAGE_ALLOWED_LOCATIONS = ('azure://<name>.blob.core.windows.net/<container>/');
+
+ DESC STORAGE INTEGRATION azure_pacificretail_integration;
+
+  use pacificretail_db.bronze
+ CREATE OR REPLACE STAGE adls_stage
+    STORAGE_INTEGRATION = azure_pacificretail_integration
+    URL = 'azure://<name>.blob.core.windows.net/<container>'
